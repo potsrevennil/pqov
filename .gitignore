@@ -4,3 +4,4 @@ sign_api-test
 PQCgenKAT_sign*
 *.req
 *.rsp
+.direnv
