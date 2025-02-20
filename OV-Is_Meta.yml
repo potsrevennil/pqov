@@ -1,0 +1,18 @@
+# Copyright (c) 2024-2025 The mlkem-native project authors
+# SPDX-License-Identifier: Apache-2.0
+name: OV-Is
+type: signature
+claimed-nist-level: 1
+length-public-key: 412160
+length-secret-key: 348704
+length-signature: 96
+nistkat-sha256: 009a5a002c1e385055e596cb1d2a5100718770378255a15fa08884f6cb84e00d
+implementations:
+  - name: ref
+    version: https://github.com/pqov/pqov/tree/main
+    folder_name: src
+    compile_opts: -D_OV16_160_64 -D_OV_CLASSIC
+    signature_keypair: crypto_sign_keypair
+    signature_signature: crypto_sign
+    signature_verify: crypto_sign_open
+    sources: api.h blas.h blas_comm.h blas_matrix.c blas_matrix.h config.h gf16.h ov.c ov.h ov_blas.h ov_keypair.c ov_keypair.h ov_keypair_computation.c ov_keypair_computation.h ov_publicmap.c parallel_matrix_op.c parallel_matrix_op.h params.h ref/blas_matrix_ref.c ref/blas_matrix_ref.h ref/blas_u32.h
