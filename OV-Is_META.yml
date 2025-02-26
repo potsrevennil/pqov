@@ -1,0 +1,18 @@
+# Copyright (c) 2024-2025 The mlkem-native project authors
+# SPDX-License-Identifier: Apache-2.0
+name: OV-Is
+type: signature
+claimed-nist-level: 1
+length-public-key: 412160
+length-secret-key: 348704
+length-signature: 96
+nistkat-sha256: 009a5a002c1e385055e596cb1d2a5100718770378255a15fa08884f6cb84e00d
+implementations:
+  - name: ref
+    version: https://github.com/pqov/pqov/tree/main
+    folder_name: .
+    compile_opts: -D_OV16_160_64 -D_OV_CLASSIC -D_UTILS_OQS_
+    signature_keypair: crypto_sign_keypair
+    signature_signature: crypto_sign_signature
+    signature_verify: crypto_sign_verify
+    sources: src/api.h src/blas.h src/blas_comm.h src/blas_matrix.c src/blas_matrix.h src/config.h src/gf16.h src/ov.c src/ov.h src/ov_blas.h src/ov_keypair.c src/ov_keypair.h src/ov_keypair_computation.c src/ov_keypair_computation.h src/ov_publicmap.c src/parallel_matrix_op.c src/parallel_matrix_op.h src/params.h src/sign.c src/ref/blas_matrix_ref.c src/ref/blas_matrix_ref.h src/ref/blas_u32.h utils/utils_hash.c utils/utils_hash.h utils/utils_malloc.h utils/utils_prng.c utils/utils_prng.h utils/utils_randombytes.c utils/utils_randombytes.h

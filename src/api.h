@@ -11,7 +11,7 @@
 
 //#define _SUPERCOP_
 
-#if defined(PQM4)
+#if defined(PQM4) || defined(_UTILS_OQS_)
 // for size_t
 #include <stddef.h>
 
